@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC.Inc — Crowd Flow Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Hardware disconnect banner -->
+    <div id="hw-banner" class="hw-banner hidden">
+      <span class="hw-banner-icon">⚠</span>
+      <span>Junction device disconnected — feeds paused</span>
+      <button id="hw-reconnect-btn" class="btn btn-sm btn-outline">Reconnect</button>
+      <button class="hw-banner-close" onclick="document.getElementById('hw-banner').classList.add('hidden')">×</button>
+    </div>
+
+    <!-- Views are injected here -->
+    <div id="view-container"></div>
+  </div>
+
+  <!-- Alert popup container -->
+  <div id="alert-popup-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="src/js/utils.js"></script>
+  <script src="src/js/db.js"></script>
+  <script src="src/js/auth.js"></script>
+  <script src="src/js/venue.js"></script>
+  <script src="src/js/hardware.js"></script>
+  <script src="src/js/dashboard.js"></script>
+  <script src="src/js/analytics.js"></script>
+  <script src="src/js/events.js"></script>
+  <script src="src/js/app.js"></script>
+</body>
+</html>

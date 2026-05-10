@@ -1,0 +1,41 @@
+{
+  "name": "cc-inc",
+  "version": "1.0.0",
+  "description": "CC.Inc — Real-time Crowd Flow Management Software",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "chart.js": "^4.4.7",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "html2canvas": "^1.4.1",
+    "papaparse": "^5.4.1",
+    "serialport": "^12.0.0",
+    "archiver": "^7.0.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.ccinc.crowdflow",
+    "productName": "CC.Inc",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron-main.js",
+      "preload.js",
+      "index.html",
+      "src/**/*",
+      "node_modules/**/*"
+    ]
+  }
+}
